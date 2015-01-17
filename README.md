@@ -41,7 +41,7 @@ db.anagrams.mapReduce(
     out: "result"
   }
 )
-```
+
 
 
 ```
