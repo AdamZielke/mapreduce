@@ -55,4 +55,5 @@ Wynik:
         },
         "ok" : 1
 }
-
+```
+![obraz](http://thewindowsclub.thewindowsclubco.netdna-cdn.com/wp-content/uploads/2011/11/SQL-600x309.png?75a050)
