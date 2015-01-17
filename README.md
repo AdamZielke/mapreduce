@@ -43,17 +43,6 @@ db.anagrams.mapReduce(
 )
 ```
 
-Wynik: 
-```
-{
-        
-        "counts" : {
-                "input" : 16398,
-                "emit" : 16398,
-                "reduce" : 7853,
-                "output" : 7011
-        },
-        "ok" : 1
-}
+
 ```
 ![obraz](http://thewindowsclub.thewindowsclubco.netdna-cdn.com/wp-content/uploads/2011/11/SQL-600x309.png?75a050)
