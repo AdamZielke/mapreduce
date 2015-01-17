@@ -9,7 +9,7 @@ ZADANIE 3
 
 |Specyfikacja komputera |                                         |
 |-----------------------|-----------------------------------------|
-| System operacyjny     | Windows 7 (64-bit)             |
+| System operacyjny     | Windows 8 (64-bit)             |
 | Procesor              | Intel(R) Core(TM) i5-1337M CPU @ 2.40GHz|
 | Pamięć Ram            | 4 GB                                    |
 | Dysk twardy           | 500 GB                               |
@@ -33,14 +33,30 @@ Zaimportowano:
 Anagramy uzyskałem z użyciem mapreduce:
 Pary posortowanych słów oraz ciągów znaków. 
 ```sh
-db.anagrams.mapReduce(
-  function(){emit(Array.sum(this.words.split("").sort()), this.words);},
-  function(key, values) {return values.toString()},
-  {
-    query: {},
-    out: "result"
-  }
-)
+var m = function() {
+    emit(this.word.split('').sort().toString(), this.word);
+};
+
+var r = function(key, values) {
+    return values.toString();
+};
+
+var result = db.words.mapReduce(m, r, {
+    out: {inline: 1}
+});
+
+var anagrams = [];
+
+for(x = 0; x < result.results.length; x++) {
+    var record = result.results[x];
+    var array = record.value.split(',');
+    if(typeof(array[1]) != 'undefined') {
+        anagrams.push(record.value);
+    }
+}
+
+printjson(anagrams);
+
 
 
 
