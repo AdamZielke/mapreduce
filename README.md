@@ -61,6 +61,7 @@ printjson(anagrams);
 
 
 ```
+#Wynik
 ![1](anag.png)
 
 
