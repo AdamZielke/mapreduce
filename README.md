@@ -42,3 +42,17 @@ db.anagrams.mapReduce(
   }
 )
 ```
+
+Wynik: 
+```
+{
+        
+        "counts" : {
+                "input" : 16398,
+                "emit" : 16398,
+                "reduce" : 7853,
+                "output" : 7011
+        },
+        "ok" : 1
+}
+
