@@ -31,7 +31,7 @@ Zaimportowano:
 8199
 ```
 Anagramy uzyskałem z użyciem mapreduce:
-Pary posortowanych słów oraz ciągów znaków. 
+
 ```sh
 var m = function() {
     emit(this.word.split('').sort().toString(), this.word);
